@@ -1,0 +1,410 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* Navbar transparente que se vuelve azul oscuro */
+.navbar {
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+.navbar.scrolled {
+  background-color: #10174f !important;
+}
+.botonnavbar{
+    background-color: #A67F3E;
+    color: #ffff;
+    padding: 10px 30px;
+    border-radius: 28px;
+    text-decoration: none;
+}
+/* Hero section */
+.hero {
+  height: 80vh;
+  background: url('images/herobg.jpg') center center / cover no-repeat;
+  position: relative;
+  padding-top: 80px;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top:0; left:0;
+  width:100%; height:100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index:1;
+}
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.tituloHero{
+    font-family:  "Playfair Display", serif;
+    font-weight: 400;
+    font-size: 52px;
+}
+.lead{
+    margin-bottom: 5%;
+}
+.botonhero{
+    background-color: #A67F3E;
+    color: #ffff;
+    padding: 15px 35px;
+    border-radius: 28px;
+    text-decoration: none;
+}
+
+/* carrusel logos */
+
+.logo-carousel {
+  background-color: #fff;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  white-space: nowrap;
+}
+
+.logo-track {
+  animation: scrollLogos 40s linear infinite;
+  display: flex;
+  gap: 80px;
+}
+
+.logo-item {
+  flex: 0 0 auto;
+  width: 150px;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.logo-item img {
+  max-width: 100%;
+  max-height: 60px;
+  object-fit: contain;
+  transition: transform 0.3s;
+}
+
+.logo-item:hover img {
+  transform: scale(1.05);
+}
+
+
+/*'Sobre Nosotros' */
+.sobre{
+    margin-top: 8%;
+    margin-bottom: 10%;
+}
+.sobre-contenedor {
+  max-width: 1140px;
+}
+.sobre h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  line-height: 1.3;
+}
+.textodorado{
+  color: #A67F3E;
+}
+.tituloSobreNosotros{
+  font-family: "Playfair Display", serif;
+  color: #A67F3E;
+}
+.img-stack {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  min-height: 280px;
+}
+
+.img1 {
+  position: relative;
+  z-index: 2;
+  left: 200px;
+  bottom: 20px;
+  width: 50%;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.img2 {
+  position: absolute;
+  bottom: -100px;
+  left: -10px;
+  width: 60%;
+  z-index: 1;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(185, 20, 20, 0.15);
+}
+.ultimonosotros{
+    margin-bottom: 10%;
+}
+
+/* servicios */
+.servicios {
+  background-color: #f9f6f1; /* Color crema claro */
+}
+
+.servicios h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.servicios .card h5 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.2rem;
+}
+
+.textodorado {
+  color: #A67F3E;
+}
+
+
+/* reseñas */
+.testimonios {
+  background-color: #f9f6f1;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+.perfil-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.perfil-foto {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.tituloreseñas{
+    font-family:"Playfair Display", serif;
+    margin-bottom: 6%;
+}
+.testimonial-card.elegante {
+  background-color: white;
+  border-radius: 12px;
+  padding: 25px 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+  text-align: center;
+  margin: 0 12px; /* separa las tarjetas entre sí */
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card.elegante h5.nombre {
+  font-weight: bold;
+  color: #A67F3E;
+  margin: 0;
+}
+
+.testimonial-card.elegante p {
+  margin: 0.4rem 0;
+}
+
+.testimonial-card.elegante .puntuacion {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #A67F3E;
+}
+
+.subtitulo {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #999;
+  margin-bottom: 10px;
+}
+
+.comentario {
+  font-size: 1rem;
+  color: #333;
+  margin: 0 0 10px;
+}
+
+.disponible {
+  font-weight: 600;
+  color: #A67F3E;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+
+
+/* efecto para centrar el medio */
+.slick-center .testimonial-card.elegante {
+  transform: scale(1.05);
+  border: 2px solid #A67F3E;
+}
+
+
+
+/* Flechitas */
+.slick-prev:before,
+.slick-next:before {
+  color: #A67F3E;
+  font-size: 28px;
+}
+
+.slick-dots li button:before {
+  color: #A67F3E;
+  font-size: 12px;
+  margin-top: 50px;
+
+}
+
+.slick-dots li.slick-active button:before {
+  margin-top: 50px;
+  color: #A67F3E;
+}
+
+
+/* Propuesta de valor */
+.descarga-guia {
+  background-color: #fef8f1; /* cremita */
+}
+
+.descarga-guia h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  color: #10174f;
+  line-height: 1.3;
+}
+
+.descarga-guia .textodorado {
+  color: #A67F3E;
+}
+
+.guia-form input {
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+}
+
+.guia-form input:focus {
+  border-color: #A67F3E;
+  box-shadow: 0 0 0 0.15rem rgba(166, 127, 62, 0.25);
+}
+
+.guia-form button {
+  font-weight: 500;
+}
+
+
+
+
+
+/* Contacto */
+.contacto h2 {
+  color: #000;
+  font-weight: 650;
+  font-family:"Playfair Display", serif;
+
+}
+
+.contacto p {
+  margin-bottom: 0.5rem;
+}
+
+.contacto i {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #A67F3E;
+}
+
+
+.btn-dorado {
+  background-color: #A67F3E;
+  color: #fff;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-dorado:hover {
+  background-color: #8e6b34; /* tono más oscuro para hover */
+  color: #fff;
+}
+
+.btn-dorado:active {
+  background-color: #72562a; /* aún más oscuro al hacer clic */
+  transform: scale(0.98);
+}
+
+
+.contacto form .btn {
+  border-radius: 28px;
+}
+
+
+.contacto .form-control {
+  border-radius: 6px;
+  border-color: #ddd;
+}
+
+.contacto .form-control:focus {
+  box-shadow: 0 0 0 0.2rem rgba(166, 127, 62, 0.25);
+  border-color: #A67F3E;
+}
+
+.textoiconos{
+    font-family:"Playfair Display", serif;
+}
+
+
+/* Footer */
+.footer {
+  background-color: #10174f;
+  color: white;
+  font-size: 0.95rem;
+}
+
+.footer-link {
+  color: #bbb;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.textodorado {
+  color: #A67F3E;
+}
+
+.footer i {
+  font-size: 1rem;
+}
+.footer li{
+    color: #bbb;
+}
+
+.footer .social-icons i {
+  font-size: 1.25rem;
+  transition: color 0.3s ease;
+}
+
+.footer .social-icons i:hover {
+  color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes scrollLogos {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
