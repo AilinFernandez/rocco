@@ -1,6 +1,22 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
+/* Estilos globales para prevenir desbordamiento */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
 /* Navbar transparente que se vuelve azul oscuro */
 .navbar {
   background-color: transparent;
@@ -59,12 +75,16 @@
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
   white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
 }
 
 .logo-track {
   animation: scrollLogos 40s linear infinite;
   display: flex;
   gap: 80px;
+  width: max-content;
 }
 
 .logo-item {
@@ -167,6 +187,15 @@
   padding-top: 10%;
   padding-bottom: 10%;
 }
+
+.testimonial-slider {
+  position: relative;
+  padding: 0 60px;
+  margin: 0 auto;
+  max-width: 100%;
+  overflow: hidden;
+}
+
 .perfil-info {
   display: flex;
   align-items: center;
@@ -245,7 +274,36 @@
 .slick-prev:before,
 .slick-next:before {
   color: #A67F3E;
-  font-size: 28px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Estilos para las flechas en escritorio */
+.slick-prev,
+.slick-next {
+  width: 35px;
+  height: 35px;
+  z-index: 10;
+  background: transparent;
+  border: none;
+}
+
+.slick-prev {
+  left: 10px;
+}
+
+.slick-next {
+  right: 10px;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  background: transparent;
+}
+
+.slick-prev:hover:before,
+.slick-next:hover:before {
+  color: #A67F3E;
 }
 
 .slick-dots li button:before {
@@ -258,6 +316,99 @@
 .slick-dots li.slick-active button:before {
   margin-top: 50px;
   color: #A67F3E;
+}
+
+/* Responsive para el carrusel de testimonios */
+@media (max-width: 768px) {
+  .testimonial-slider {
+    padding: 0 20px;
+  }
+  
+  .slick-prev,
+  .slick-next {
+    width: 30px;
+    height: 30px;
+    z-index: 10;
+    border: none;
+    background: transparent;
+  }
+  
+  .slick-prev {
+    left: -10px;
+  }
+  
+  .slick-next {
+    right: -10px;
+  }
+  
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .slick-prev:hover,
+  .slick-next:hover {
+    background: transparent;
+  }
+  
+  .slick-prev:hover:before,
+  .slick-next:hover:before {
+    color: #A67F3E;
+  }
+  
+  .slick-dots {
+    bottom: -30px;
+  }
+  
+  .slick-dots li button:before {
+    font-size: 10px;
+    margin-top: 20px;
+  }
+  
+  .slick-dots li.slick-active button:before {
+    margin-top: 20px;
+  }
+  
+  /* Asegurar que las tarjetas no se desborden */
+  .testimonial-card.elegante {
+    margin: 0 8px;
+    padding: 20px 15px;
+  }
+  
+  /* Centrar mejor en móvil */
+  .slick-center .testimonial-card.elegante {
+    transform: scale(1.02);
+  }
+}
+
+@media (max-width: 576px) {
+  .testimonial-slider {
+    padding: 0 15px;
+  }
+  
+  .slick-prev {
+    left: -5px;
+  }
+  
+  .slick-next {
+    right: -5px;
+  }
+  
+  .testimonial-card.elegante {
+    margin: 0 5px;
+    padding: 15px 10px;
+  }
+  
+  .perfil-foto {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .tituloreseñas {
+    font-size: 1.5rem;
+    margin-bottom: 4%;
+  }
 }
 
 
@@ -407,4 +558,105 @@
 @keyframes scrollLogos {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
+}
+
+/* Responsive para el carrusel de logos */
+@media (max-width: 768px) {
+  .logo-carousel {
+    padding: 0;
+  }
+  
+  .logo-track {
+    gap: 40px;
+  }
+  
+  .logo-item {
+    width: 120px;
+  }
+  
+  .logo-item img {
+    max-height: 50px;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo-track {
+    gap: 30px;
+  }
+  
+  .logo-item {
+    width: 100px;
+  }
+  
+  .logo-item img {
+    max-height: 40px;
+  }
+}
+
+/* Responsive para las imágenes de la sección Sobre Nosotros */
+@media (max-width: 768px) {
+  .img-stack {
+    max-width: 100%;
+    min-height: 200px;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+    text-align: center;
+  }
+  
+  .img1 {
+    position: relative;
+    width: 50%;
+    max-width: 160px;
+    left: 50px;
+    bottom: 15px;
+    z-index: 2;
+    order: unset;
+  }
+  
+  .img2 {
+    position: absolute;
+    width: 65%;
+    max-width: 200px;
+    left: 20px;
+    bottom: -50px;
+    z-index: 1;
+    order: unset;
+  }
+  
+  .sobre .col-lg-6:first-child {
+    margin-bottom: 30px;
+  }
+  
+  .tituloSobreNosotros {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .img-stack {
+    min-height: 150px;
+  }
+  
+  .img1 {
+    width: 45%;
+    max-width: 130px;
+    left: 80px;
+    bottom: 6px;
+  }
+  
+  .img2 {
+    width: 60%;
+    max-width: 160px;
+    left: 15px;
+    bottom: -40px;
+  }
+  
+  .sobre h2 {
+    font-size: 1.5rem;
+  }
+  
+  .tituloSobreNosotros {
+    font-size: 1.3rem;
+  }
 }
