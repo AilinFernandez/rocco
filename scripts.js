@@ -7,48 +7,25 @@ window.addEventListener('scroll', function () {
   }
 });
 
-$(document).ready(function(){
-  $('.testimonial-slider').slick({
-    centerMode: true,
-    centerPadding: '40px',
-    slidesToShow: 3,
-    arrows: true,
-    dots: true,
-    autoplay: false,
-    autoplaySpeed: 5000,
-    pauseOnHover: true,
-    responsive: [
-      {
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 1,
-          centerMode: true,
-          centerPadding: '20px',
-          arrows: true,
-          dots: true
-        }
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          centerMode: true,
-          centerPadding: '15px',
-          arrows: true,
-          dots: true
-        }
-      },
-      {
-        breakpoint: 576,
-        settings: {
-          slidesToShow: 1,
-          centerMode: false,
-          centerPadding: '0px',
-          arrows: true,
-          dots: true
-        }
+// Funcionalidad para mostrar/ocultar todas las empresas
+document.addEventListener('DOMContentLoaded', function() {
+  const verMasBtn = document.getElementById('verMasEmpresas');
+  const todasEmpresas = document.getElementById('todasEmpresas');
+  
+  if (verMasBtn && todasEmpresas) {
+    verMasBtn.addEventListener('click', function() {
+      if (todasEmpresas.style.display === 'none') {
+        todasEmpresas.style.display = 'block';
+        verMasBtn.textContent = 'Ver menos empresas';
+        verMasBtn.classList.remove('btn-outline-dorado');
+        verMasBtn.classList.add('btn-dorado');
+      } else {
+        todasEmpresas.style.display = 'none';
+        verMasBtn.textContent = 'Ver todas las empresas';
+        verMasBtn.classList.remove('btn-dorado');
+        verMasBtn.classList.add('btn-outline-dorado');
       }
-    ]
-  });
+    });
+  }
 });
 

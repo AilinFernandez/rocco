@@ -3,15 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tu Estudio Jurídico</title>
+  <title>Estudio Rocco Abogados</title>
+  <link rel="icon" type="image/png" href="images/miniatura.png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  
-  <!-- Para el carousel -->
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-  
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -19,29 +16,36 @@
 <!-- NAVBAR -->
 <nav id="mainNav" class="navbar navbar-expand-lg fixed-top navbar-dark py-3">
   <div class="container">
-    <a class="navbar-brand fw-bold" href="#">TuLogo</a>
+    <a class="navbar-brand" href="#">
+      <img src="images/logo.png" alt="Estudio Rocco Abogados" height="40">
+    </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
       <ul class="navbar-nav me-3">
         <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Sobre Nosotros</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Servicios</a></li>
+        <li class="nav-item"><a class="nav-link" href="#sobrenosotros">Sobre Nosotros</a></li>
+        <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+
       </ul>
-      <a href="#contacto" class="botonnavbar">Contáctanos</a>
+             <a href="#contacto" class="cartel-prohibido">
+         <img src="images/nomultas.jpeg" alt="No Multas" class="cartel-img">
+       </a>
     </div>
   </div>
 </nav>
 
 <!-- HERO -->
 <header class="hero d-flex align-items-center" id="hero">
-  <div class="container">
+  <div class="container" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
     <div class="row">
       <div class="col-md-7 text-white">
-        <h1 class="tituloHero">Tu Estudio Jurídico</h1>
-        <p class="lead">Asesoría legal estratégica y personalizada en Derecho.</p>
-        <a href="#contacto" class="botonhero">Contáctanos</a>
+        <h1 class="tituloHero">Estudio Rocco Abogados</h1>
+        <p class="lead">Lo asesoramos en derecho empresarial, laboral y tributario con un enfoque estratégico que anticipa riesgos, reduce costos y asegura la continuidad de su negocio</p>
+        <p class="lead">Evite sanciones, conflictos y juicios innecesarios. Anticípese con nosotros</p>
+        <a href="#contacto" class="botonhero">Solicite una consulta</a>
       </div>
     </div>
   </div>
@@ -68,12 +72,15 @@
 
 
 <!-- SECCIÓN SOBRE NOSOTROS -->
-<section class="sobre py-5">
+<section class="sobre py-5" id="sobrenosotros" data-aos="fade-up" data-aos-duration="1000" >
   <div class="container sobre-contenedor">
     <!-- Título centrado -->
     <div class="text-center mb-5">
       <h2 class="display-6 fw-normal">
-        Confíe en un Estudio Jurídico de <strong>Excelencia</strong> en <span class="textodorado">Derecho empresarial</span>
+        Su empresa necesita <strong>crecer sin conflictos.</strong> <span class="textodorado">Nosotros lo respaldamos</span>
+        
+        
+        <!-- Confíe en un Estudio Jurídico de <strong>Excelencia</strong> en <span class="textodorado">Derecho empresarial</span>-->
       </h2>
     </div>
 
@@ -88,15 +95,13 @@
 
       <!-- Columna texto -->
       <div class="col-lg-6">
-        <h3 class="tituloSobreNosotros mb-3">Tu Estudio Jurídico</h3>
-        <p class="text-muted">
-          En nuestro Estudio entendemos que detrás de cada caso legal hay personas reales. Por eso, priorizamos una atención cercana, transparente y de calidad.
-          Con abogados capacitados, convertimos desafíos legales en oportunidades, protegiendo tus intereses en cada etapa del proceso.
-        </p>
+        <h3 class="tituloSobreNosotros mb-3">Estudio Rocco Abogados</h3>
         <p class="text-muted ultimonosotros">
-          Combinamos conocimiento técnico con comunicación clara, manteniéndote informado desde el principio. Ya sea para prevenir riesgos o resolver situaciones complejas, estamos listos para acompañarte con seriedad y compromiso.
+          En nuestro Estudio nosotros lo respaldamos con estrategia legal preventiva en lo laboral, empresarial y tributario, para que usted se concentre en su negocio.
+          <br>
+          Ayudamos a las empresas a evitar sanciones, reducir costos y anticiparse a conflictos que ponen en riesgo su crecimiento.
         </p>
-        <a href="#contacto" class="botonhero">Estudio de Abogacía</a>
+        <!-- <a href="#contacto" class="botonhero">Solicite una consulta</a> -->
       </div>
     </div>
   </div>
@@ -104,7 +109,7 @@
 
 
 <!-- Servicios -->
-<section class="servicios py-5">
+<section class="servicios py-5" id="servicios" data-aos="fade-down" data-aos-duration="1000" >
   <div class="container">
     <div class="text-center mb-5">
       <h2 class="display-6 fw-normal">
@@ -116,14 +121,15 @@
       <!-- CARD 1 -->
       <div class="col-md-6 col-lg-4">
         <div class="card h-100 p-4 shadow-sm border-0 rounded-4 text-center">
-          <div class="text-end">
+          <!-- <div class="text-end">
             <span class="badge bg-light text-muted rounded-pill px-3 py-1 small">Exclusivo</span>
-          </div>
+          </div>-->
           <div class="fs-1 textodorado mb-3">
-            <i class="bi bi-clipboard"></i>
+            <i class="bi bi-people-fill"></i>
           </div>
-          <h5 class="fw-semibold mb-2">Planeamiento Previsional</h5>
-          <p class="text-muted">Planificá tu jubilación con asesoría legal especializada.</p>
+          <h5 class="fw-semibold mb-2">Laboral y Recursos Humanos</h5>
+          <p class="text-muted">Prevención de juicios, negociación sindical, contratos y auditorías de RRHH que aseguran tranquilidad y orden administrativo.
+          </p>
           <a href="#" class="text-muted fw-semibold text-decoration-none">Leer más</a>
         </div>
       </div>
@@ -132,10 +138,11 @@
       <div class="col-md-6 col-lg-4">
         <div class="card h-100 p-4 shadow-sm border-0 rounded-4 text-center">
           <div class="fs-1 textodorado mb-3">
-            <i class="bi bi-umbrella-fill"></i>
+            <i class="bi bi-buildings-fill"></i>
           </div>
-          <h5 class="fw-semibold mb-2">Jubilación por Edad</h5>
-          <p class="text-muted">Garantizá tu jubilación previsional de forma segura.</p>
+          <h5 class="fw-semibold mb-2">Empresarial y Consultoría</h5>
+          <p class="text-muted"> Defensa en inspecciones, optimización de procesos y resolución de conflictos para que su empresa no se detenga.
+          </p>
           <a href="#" class="text-muted fw-semibold text-decoration-none">Leer más</a>
         </div>
       </div>
@@ -144,143 +151,155 @@
       <div class="col-md-6 col-lg-4">
         <div class="card h-100 p-4 shadow-sm border-0 rounded-4 text-center">
           <div class="fs-1 textodorado mb-3">
-            <i class="bi bi-person-wheelchair"></i>
+            <i class="bi bi-receipt"></i>
           </div>
-          <h5 class="fw-semibold mb-2">Jubilación por Invalidez</h5>
-          <p class="text-muted">Beneficio previsional por incapacidad permanente.</p>
+          <h5 class="fw-semibold mb-2">Tributario y Seguridad Social</h5>
+          <p class="text-muted">Estrategia impositiva, representación frente a AFIP y causas tributarias para proteger su patrimonio y continuidad.
+          </p>
           <a href="#" class="text-muted fw-semibold text-decoration-none">Leer más</a>
         </div>
       </div>
-
-      <!-- CARD 4 -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100 p-4 shadow-sm border-0 rounded-4 text-center">
-          <div class="fs-1 textodorado mb-3">
-            <i class="bi bi-person-wheelchair"></i>
-          </div>
-          <h5 class="fw-semibold mb-2">Jubilación por Invalidez</h5>
-          <p class="text-muted">Beneficio previsional por incapacidad permanente.</p>
-          <a href="#" class="text-muted fw-semibold text-decoration-none">Leer más</a>
-        </div>
-      </div>
-
-      <!-- CARD 5 -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100 p-4 shadow-sm border-0 rounded-4 text-center">
-          <div class="fs-1 textodorado mb-3">
-            <i class="bi bi-person-wheelchair"></i>
-          </div>
-          <h5 class="fw-semibold mb-2">Jubilación por Invalidez</h5>
-          <p class="text-muted">Beneficio previsional por incapacidad permanente.</p>
-          <a href="#" class="text-muted fw-semibold text-decoration-none">Leer más</a>
-        </div>
-      </div>
-
-      <!-- CARD 6 -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100 p-4 shadow-sm border-0 rounded-4 text-center">
-          <div class="fs-1 textodorado mb-3">
-            <i class="bi bi-person-wheelchair"></i>
-          </div>
-          <h5 class="fw-semibold mb-2">Jubilación por Invalidez</h5>
-          <p class="text-muted">Beneficio previsional por incapacidad permanente.</p>
-          <a href="#" class="text-muted fw-semibold text-decoration-none">Leer más</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- Reseñas -->
-<!-- RESEÑAS -->
-
-<section class="testimonios">
-  <div class="container">
-    <h2 class="text-center tituloreseñas">Lo que dicen nuestros clientes</h2>
-
-    <div class="testimonial-slider">
-      <!-- Tarjeta 1 -->
-      <div class="testimonial-card elegante">
-            <div class="perfil-info">
-                <img src="https://i.pravatar.cc/80?img=8" alt="Foto de Nicolle" class="perfil-foto">
-                <div>
-                <h5 class="nombre">Nicolle Gianinni</h5>
-                <p class="subtitulo">Engenheira</p>
-                </div>
-            </div>
-            <p>Experiência maravilhosa 👏👏👏</p>
-            <p class="disponible">Avaliação Disponível no Google</p>
-            <p class="puntuacion">5.0 ★★★★★</p>
-        </div>
-   <!-- Tarjeta 1 -->
-      <div class="testimonial-card elegante">
-            <div class="perfil-info">
-                <img src="https://i.pravatar.cc/80?img=8" alt="Foto de Nicolle" class="perfil-foto">
-                <div>
-                <h5 class="nombre">Nicolle Gianinni</h5>
-                <p class="subtitulo">Engenheira</p>
-                </div>
-            </div>
-            <p>Experiência maravilhosa 👏👏👏</p>
-            <p class="disponible">Avaliação Disponível no Google</p>
-            <p class="puntuacion">5.0 ★★★★★</p>
-        </div>
-           <!-- Tarjeta 1 -->
-      <div class="testimonial-card elegante">
-            <div class="perfil-info">
-                <img src="https://i.pravatar.cc/80?img=8" alt="Foto de Nicolle" class="perfil-foto">
-                <div>
-                <h5 class="nombre">Nicolle Gianinni</h5>
-                <p class="subtitulo">Engenheira</p>
-                </div>
-            </div>
-            <p>Experiência maravilhosa 👏👏👏</p>
-            <p class="disponible">Avaliação Disponível no Google</p>
-            <p class="puntuacion">5.0 ★★★★★</p>
-        </div>
-           <!-- Tarjeta 1 -->
-      <div class="testimonial-card elegante">
-            <div class="perfil-info">
-                <img src="https://i.pravatar.cc/80?img=8" alt="Foto de Nicolle" class="perfil-foto">
-                <div>
-                <h5 class="nombre">Nicolle Gianinni</h5>
-                <p class="subtitulo">Engenheira</p>
-                </div>
-            </div>
-            <p>Experiência maravilhosa 👏👏👏</p>
-            <p class="disponible">Avaliação Disponível no Google</p>
-            <p class="puntuacion">5.0 ★★★★★</p>
-        </div>
-           <!-- Tarjeta 1 -->
-      <div class="testimonial-card elegante">
-            <div class="perfil-info">
-                <img src="https://i.pravatar.cc/80?img=8" alt="Foto de Nicolle" class="perfil-foto">
-                <div>
-                <h5 class="nombre">Nicolle Gianinni</h5>
-                <p class="subtitulo">Engenheira</p>
-                </div>
-            </div>
-            <p>Experiência maravilhosa 👏👏👏</p>
-            <p class="disponible">Avaliação Disponível no Google</p>
-            <p class="puntuacion">5.0 ★★★★★</p>
-        </div>
-
-
       
     </div>
   </div>
 </section>
+
+<!-- Nuestro Diferencial -->
+<section class="diferencial py-5" >
+  <div class="container" >
+    <div class="row g-5" data-aos="fade-right">
+      <!-- Diferencial -->
+      <div class="col-lg-6">
+        <h3 class="textodorado mb-4">Nuestro Diferencial</h3>
+        <p class="lead mb-4">
+          No solo resolvemos problemas: los prevenimos antes de que ocurran. Esa es la diferencia que protege a nuestros clientes todos los días.
+        </p>
+        <p class="text-muted">
+          Anticípese a los riesgos. Proteja hoy lo que tanto le costó construir.
+        </p>
+      </div>
+      
+      <!-- Radio de Acción -->
+      <div class="col-lg-6">
+        <h3 class="textodorado mb-4">Radio de Acción</h3>
+        <p class="lead mb-4">
+          Atendemos empresas en Capital Federal y Gran Buenos Aires, con corresponsales en las principales ciudades del país.
+        </p>
+        <div class="text-start">
+          <a href="#contacto" class="btn btn-dorado btn-lg px-5 rounded-pill">Solicite una consulta</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+ <!-- Empresas con las que trabajamos -->
+ <section class="empresas" id="empresas">
+   <div class="container" data-aos="fade-up">
+     <div class="text-center mb-5">
+       <h2 class="display-6 fw-normal">
+         Empresas que <span class="textodorado">confían en nosotros</span>
+       </h2>
+       <p class="text-muted">Trabajamos con empresas de diversos sectores, brindando soluciones legales integrales</p>
+     </div>
+
+     <!-- Empresas destacadas -->
+     <div class="row g-4 mb-5">
+       <div class="col-md-4">
+         <div class="empresa-card text-center p-4 shadow-sm border-0 rounded-4 h-100">
+           <img src="https://www.cocacolaep.com/assets/legacy-assets/Uploads/resources/Coca-Cola-1210__FocusFillWyIwLjAwIiwiMC4wMCIsMTM3Niw1MzJd.jpg" alt="Coca-Cola" class="empresa-logo mb-3">
+           <h5 class="fw-semibold">Coca-Cola</h5>
+           <p class="text-muted small">Sector: Bebidas</p>
+         </div>
+       </div>
+       <div class="col-md-4">
+         <div class="empresa-card text-center p-4 shadow-sm border-0 rounded-4 h-100">
+           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Cencosud-2014.svg/1200px-Cencosud-2014.svg.png" alt="Cencosud" class="empresa-logo mb-3">
+           <h5 class="fw-semibold">Cencosud</h5>
+           <p class="text-muted small">Sector: Retail</p>
+         </div>
+       </div>
+       <div class="col-md-4">
+         <div class="empresa-card text-center p-4 shadow-sm border-0 rounded-4 h-100">
+           <img src="https://http2.mlstatic.com/D_NQ_NP_851109-MLA74959046021_032024-F.jpg" alt="Mercado Libre" class="empresa-logo mb-3">
+           <h5 class="fw-semibold">Mercado Libre</h5>
+           <p class="text-muted small">Sector: E-commerce</p>
+         </div>
+       </div>
+     </div>
+
+     <!-- Botón para ver más empresas -->
+     <div class="text-center">
+       <button class="btn btn-outline-dorado px-4 rounded-pill" id="verMasEmpresas">
+         Ver todas las empresas
+       </button>
+     </div>
+
+     <!-- Lista completa de empresas (oculta inicialmente) -->
+     <div class="todas-empresas mt-5" id="todasEmpresas" style="display: none;">
+       <div class="row g-4">
+         <div class="col-md-3 col-sm-6">
+           <div class="empresa-item text-center p-3">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbD5dKfD0VzDj4VLWMaE1l_O6ac_3ZgoAa6A&s" alt="Empresa" class="empresa-logo-pequeño mb-2">
+             <h6 class="fw-semibold">Empresa A</h6>
+           </div>
+         </div>
+         <div class="col-md-3 col-sm-6">
+           <div class="empresa-item text-center p-3">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjqHQfym9o1dT4Arehl8Bzm1e5uxNgC7ee_w&s" alt="Empresa" class="empresa-logo-pequeño mb-2">
+             <h6 class="fw-semibold">Empresa B</h6>
+           </div>
+         </div>
+         <div class="col-md-3 col-sm-6">
+           <div class="empresa-item text-center p-3">
+             <img src="https://www.cocacolaep.com/assets/legacy-assets/Uploads/resources/Coca-Cola-1210__FocusFillWyIwLjAwIiwiMC4wMCIsMTM3Niw1MzJd.jpg" alt="Empresa" class="empresa-logo-pequeño mb-2">
+             <h6 class="fw-semibold">Empresa C</h6>
+           </div>
+         </div>
+         <div class="col-md-3 col-sm-6">
+           <div class="empresa-item text-center p-3">
+             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Cencosud-2014.svg/1200px-Cencosud-2014.svg.png" alt="Empresa" class="empresa-logo-pequeño mb-2">
+             <h6 class="fw-semibold">Empresa D</h6>
+           </div>
+         </div>
+         <div class="col-md-3 col-sm-6">
+           <div class="empresa-item text-center p-3">
+             <img src="https://http2.mlstatic.com/D_NQ_NP_851109-MLA74959046021_032024-F.jpg" alt="Empresa" class="empresa-logo-pequeño mb-2">
+             <h6 class="fw-semibold">Empresa E</h6>
+           </div>
+         </div>
+         <div class="col-md-3 col-sm-6">
+           <div class="empresa-item text-center p-3">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbD5dKfD0VzDj4VLWMaE1l_O6ac_3ZgoAa6A&s" alt="Empresa" class="empresa-logo-pequeño mb-2">
+             <h6 class="fw-semibold">Empresa F</h6>
+           </div>
+         </div>
+         <div class="col-md-3 col-sm-6">
+           <div class="empresa-item text-center p-3">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjqHQfym9o1dT4Arehl8Bzm1e5uxNgC7ee_w&s" alt="Empresa" class="empresa-logo-pequeño mb-2">
+             <h6 class="fw-semibold">Empresa G</h6>
+           </div>
+         </div>
+         <div class="col-md-3 col-sm-6">
+           <div class="empresa-item text-center p-3">
+             <img src="https://www.cocacolaep.com/assets/legacy-assets/Uploads/resources/Coca-Cola-1210__FocusFillWyIwLjAwIiwiMC4wMCIsMTM3Niw1MzJd.jpg" alt="Empresa" class="empresa-logo-pequeño mb-2">
+             <h6 class="fw-semibold">Empresa H</h6>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </section>
 
 
 
 <!-- propuesta de valor -->
 <section class="descarga-guia py-5">
   <div class="container">
-    <div class="row align-items-center g-5">
+    <div class="row align-items-center g-5" >
       
       <!-- Texto y formulario -->
-      <div class="col-lg-6">
+      <div class="col-lg-6" data-aos="fade-left">
         <h2 class="mb-3">
           Descargá nuestra guía gratuita:
           <br>
@@ -293,7 +312,7 @@
       </div>
 
       <!-- Imagen/Ilustración -->
-      <div class="col-lg-6 text-center">
+      <div class="col-lg-6 text-center" data-aos="fade-right">
         <img src="./images/guiagratuita-removebg-preview.png" alt="Guía Legal" class="img-fluid" style="max-width: 400;">
       </div>
 
@@ -357,7 +376,7 @@
       <div class="col-lg-4 text-center mb-4 mb-lg-0">
         <i class="bi bi-geo-alt-fill fs-3 textodorado"></i>
         <p class="mb-1 fw-bold textoiconos">Dirección</p>
-        <p class="text-muted">Av. Siempre Viva 742, Buenos Aires</p>
+        <p class="text-muted">Int. Norberto García Silva 670 piso 6 of B, B1708 Morón, Provincia de Buenos Aires</p>
       </div>
       <div class="col-lg-4 text-center">
         <i class="bi bi-clock-fill fs-3 textodorado"></i>
@@ -376,8 +395,7 @@
 
       <!-- Columna 1: Logo + frase -->
       <div class="col-md-4 mb-4 mb-md-0">
-        <h5 class="text-white fw-bold">Tu Estudio Jurídico</h5>
-        <p class="text-muted small mt-2">Compromiso legal con humanidad.</p>
+        <h5 class="text-white fw-bold">Estudio Rocco Abogados</h5>
       </div>
 
       <!-- Columna 2: Navegación -->
@@ -385,9 +403,9 @@
         <h6 class="textodorado fw-semibold mb-3">Enlaces</h6>
         <ul class="list-unstyled text-muted small">
           <li><a href="#hero" class="footer-link">Inicio</a></li>
-          <li><a href="#sobre" class="footer-link">Sobre Nosotros</a></li>
+          <li><a href="#sobrenosotros" class="footer-link">Sobre Nosotros</a></li>
           <li><a href="#servicios" class="footer-link">Servicios</a></li>
-          <li><a href="#articulos" class="footer-link">Artículos</a></li>
+          <li><a href="#empresas" class="footer-link">Empresas</a></li>
           <li><a href="#contacto" class="footer-link">Contacto</a></li>
         </ul>
       </div>
@@ -396,7 +414,8 @@
       <div class="col-md-4">
         <h6 class="textodorado fw-semibold mb-3">Contacto</h6>
         <ul class="list-unstyled text-muted small">
-          <li><i class="bi bi-geo-alt-fill me-2 textodorado"></i> Av. Justicia 123, CABA</li>
+          <li><i class="bi bi-geo-alt-fill me-2 textodorado"></i>
+            Int. Norberto García Silva 670 piso 6 of B, B1708 Morón, Provincia de Buenos Aires</li>
           <li><i class="bi bi-telephone-fill me-2 textodorado"></i> (011) 4567-8901</li>
           <li><i class="bi bi-envelope-fill me-2 textodorado"></i> contacto@estudiojuridico.com</li>
         </ul>
@@ -412,21 +431,17 @@
 
     <!-- Disclaimer -->
     <div class="text-center small mt-3">
-      Estudio Jurídico © 2025. Todos los derechos reservados.
+      Estudio Rocco Abogados © 2025. Todos los derechos reservados.
     </div>
   </div>
 </footer>
 
 
-
-
-
-
-<!-- para el carousel -->
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<!-- -- -->
-
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="scripts.js"></script>
